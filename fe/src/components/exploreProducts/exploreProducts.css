@@ -1,0 +1,48 @@
+.explore-products{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.explore-products h2{
+    color: #28aa3c;
+    
+}
+
+.explore-products-text{
+    max-width: 60%;
+}
+
+.explore-products-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+    gap: 30px;
+    text-align: center;
+    overflow-x: scroll;
+}
+
+.explore-products-list::-webkit-scrollbar{
+    display: none;
+}
+
+.explore-products-list-item img{
+    width: 7.5vw;
+    min-width: 80px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.explore-products-list-item p{
+    margin-top: 10px;
+    font-size: max(1.4vw, 16px);
+    cursor: pointer;
+}
+
+.explore-products hr{
+    margin: 10px 0px;
+    height: 2px;
+    background-color: #e2e2e2;
+    border:none;
+}
