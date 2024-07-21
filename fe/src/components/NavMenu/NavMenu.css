@@ -1,0 +1,45 @@
+.navmenu{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+  
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+}
+
+.navmenu-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navmenu li{
+    cursor:pointer;
+}
+
+.navmenu button{
+    padding: 10px 30px;
+    font-size: 16px;
+    background: transparent;
+    color:  #49557e;
+    border: 1px solid #49557e;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navmenu button:hover{
+    background-color: #81c48c;
+}
+
+.navmenu .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid  #49557e;
+}
