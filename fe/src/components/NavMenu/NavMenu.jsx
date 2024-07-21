@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './NavMenu.css'
+import './navMenu.css'
 import { assets } from '../../assets/assets'
 
 const NavMenu = () => {

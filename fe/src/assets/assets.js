@@ -1,11 +1,12 @@
 import basket_icon from './basket_icon.png'
 import logo from './logo.png'
 import search_icon from './search_icon.png'
-
+import header_img from './header_img.png'
 
 export const assets = {
     logo,
     basket_icon,
-    search_icon
+    search_icon,
+    header_img
 }
 

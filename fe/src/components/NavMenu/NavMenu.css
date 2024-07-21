@@ -36,10 +36,26 @@
 }
 
 .navmenu button:hover{
-    background-color: #81c48c;
+    background-color: #28aa3c;
+    
 }
 
 .navmenu .active{
     padding-bottom: 2px;
     border-bottom: 2px solid  #49557e;
 }
+
+.navmenu-search-icon{
+    position: relative;
+}
+
+.navmenu-search-icon .dot{
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: #28aa3c;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
