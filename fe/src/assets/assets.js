@@ -284,7 +284,7 @@ export const product_list_category = [
         product_image: product_01
     },
     {
-        product_name: "Vegatables",
+        product_name: "Vegetables",
         product_image: product_02
     },
     {
