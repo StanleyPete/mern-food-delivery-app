@@ -7,6 +7,9 @@ import product_01 from './fruits_product_1.png'
 import product_02 from './vegatables_product_2.png'
 import product_03 from './seafood_product_3.png'
 import product_04 from './dairy_product_4.png'
+import add_icon_white from './add_icon_white.png'
+import add_icon_green from './add_icon_green.png'
+import remove_icon_red from './remove_icon_red.png'
 
 
 import product_1 from './product_1.png'
@@ -299,6 +302,9 @@ export const assets = {
     basket_icon,
     search_icon,
     header_img,
-    rating_stars
+    rating_stars,
+    add_icon_white,
+    add_icon_green,
+    remove_icon_red
 }
 

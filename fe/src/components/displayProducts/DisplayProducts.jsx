@@ -9,7 +9,7 @@ const DisplayProducts = ({category}) => {
     const {product_list} = useContext(StoreContext)
 
   return (
-    <div className='display-products' id='display-products'>
+    <div className="display-products" id="display-products">
         <h2>Top products near you</h2>
         <div className="display-products-list">
           {product_list.map((item, index)=>{
