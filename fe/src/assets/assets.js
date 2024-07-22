@@ -13,6 +13,8 @@ import remove_icon_red from './remove_icon_red.png'
 import facebook_icon from './facebook_icon.png'
 import linkedin_icon from './linkedin_icon.png'
 import twitter_icon from './twitter_icon.png'
+import google_play_store from './google_play_store.png'
+import apple_store from './apple_store.png'
 
 
 import product_1 from './product_1.png'
@@ -311,6 +313,8 @@ export const assets = {
     remove_icon_red,
     facebook_icon,
     linkedin_icon,
-    twitter_icon
+    twitter_icon,
+    google_play_store,
+    apple_store
 }
 
