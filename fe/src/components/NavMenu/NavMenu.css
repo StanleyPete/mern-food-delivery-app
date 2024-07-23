@@ -9,13 +9,14 @@
 .menu{
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 30px;
     color: #49557e;
     font-size: 18px;
 }
 
 .navmenu-right{
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 40px;
 }
@@ -25,9 +26,10 @@
 }
 
 .navmenu button{
-    padding: 10px 30px;
+    margin: 0px 4px;
+    padding: 8px 24px;
     font-size: 16px;
-    background: transparent;
+    /* background: transparent; */
     color:  #49557e;
     border: 1px solid #49557e;
     border-radius: 50px;
@@ -36,9 +38,15 @@
 }
 
 .navmenu button:hover{
-    background-color: #28aa3c;
-    
+    background-color: #28aa3c;   
 }
+
+.navmenu-right-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+
 
 .navmenu .active{
     padding-bottom: 2px;
@@ -59,3 +67,169 @@
     right: -8px;
 }
 
+@media (min-width: 320px) {
+    .navmenu .logo{
+        width: 110px;
+    }
+    .menu {
+        display: none;
+    }
+    .navmenu-right{
+        gap: 8px;
+    }
+    .navmenu-right img{
+        width: 14px;
+    }
+    .navmenu-search-icon .dot{
+        min-width: 7px;
+        min-height: 7px;
+        top: -6px;
+        right: -6px;
+    }
+    .navmenu-right button {
+        margin: 0px 2px;
+        padding: 2px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 340px) {
+    .navmenu .logo{
+        width: 115px;
+    }
+    .navmenu-right button {
+        margin: 0px 2px;
+        padding: 2px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 360px) {
+    .navmenu .logo{
+        width: 130px;
+    }
+}
+
+@media (min-width: 380px) {
+    .navmenu .logo{
+        width: 140px;
+    }
+}
+
+@media (min-width: 400px) {
+    .navmenu .logo{
+        width: 160px;
+    }
+}
+
+@media (min-width: 420px) {
+    .navmenu .logo{
+        width: 160px;
+    }
+    .navmenu-right img{
+        width: 18px;
+    }
+    .navmenu-right{
+        gap: 12px;
+    }
+    .navmenu-right button {
+        margin: 0px 2px;
+        padding: 2px 12px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 640px) {
+    .menu{
+        display: flex;
+        list-style: none;
+        gap: 8px;
+        color: #49557e;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 700px) {
+    .menu{
+        font-size: 14px;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 780px) {
+    .menu{
+        font-size: 16px;
+        gap: 15px;
+    }
+}
+
+@media (min-width: 1000px){
+    .navmenu .logo{
+        width: 180px;
+    }
+    .menu{
+        display: flex;
+        list-style: none;
+        gap: 30px;
+        color: #49557e;
+        font-size: 18px;
+    }    
+}
+
+@media (min-width: 1100px){
+    .navmenu .logo{
+        width: 230px;
+    }
+}
+
+
+
+
+/* 
+@media (max-width: 1100px) {
+    .navmenu .logo{
+        width: 140px;
+    }
+    .menu {
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navmenu-right{
+        gap: 30px;
+    }
+    .navmenu-right img{
+        width: 22px;
+    }
+    .navmenu-right button {
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width: 974px) {
+    .navmenu .logo{
+        width: 140px;
+    }
+    .menu {
+        gap: 12px;
+        font-size: 14px;
+    }
+    .navmenu-right{
+        gap: 20px;
+    }
+    .navmenu-right img{
+        width: 20px;
+    }
+    .navmenu-right button {
+        margin: 0px 3px;
+        padding: 6px 18px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 750px) {
+    .menu {
+        display: none;
+
+    }
+}
+ */

@@ -22,9 +22,10 @@ const NavMenu = () => {
           <img src={assets.basket_icon} alt="Basket icon" />
           <div className="dot"></div>
         </div>
-        <button>Sign in</button>
-        <button>Sign up</button>
-       
+        <div className="navmenu-right-buttons">
+          <button>Sign in</button>
+          <button>Sign up</button>
+        </div>
       </div>
     </div>
   )

@@ -28,3 +28,18 @@ a{
   margin: auto;
   width: 80%;
 }
+
+@media (min-width: 320px){
+  .app{
+    margin: 0 auto;
+    width: 96%;
+  }
+}
+
+
+@media (min-width: 900px){
+  .app{
+    margin: auto;
+    width: 80%;
+  }
+}
