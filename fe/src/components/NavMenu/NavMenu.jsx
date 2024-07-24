@@ -3,7 +3,7 @@ import './navMenu.css'
 import { assets } from '../../assets/assets'
 import { Link } from 'react-router-dom';
 
-const NavMenu = () => {
+const NavMenu = ({setShowLogin, setShowSignUp}) => {
 
     const [navMenuState, setNav] = useState("Products");
 
@@ -24,8 +24,8 @@ const NavMenu = () => {
           <div className="dot"></div>
         </div>
         <div className="navmenu-right-buttons">
-          <button>Sign in</button>
-          <button>Sign up</button>
+          <button onClick={()=>setShowLogin(true)}>Sign in</button>
+          <button onClick={()=>setShowSignUp(true)}>Sign up</button>
         </div>
       </div>
     </div>
