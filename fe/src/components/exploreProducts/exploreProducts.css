@@ -18,30 +18,24 @@
     justify-content: space-between;
     align-items: center;
     margin: 20px 0px;
-    gap: 30px;
     text-align: center;
-    overflow-x: scroll;
+
 }
 
-.explore-products-list::-webkit-scrollbar{
-    display: none;
-}
 
 .explore-products-list-item img{
-    width: 7.5vw;
-    min-width: 80px;
+    width: 60px;
     cursor: pointer;
     transition: 0.2s;
 }
 
 .explore-products-list-item p{
-    margin-top: 10px;
     font-size: max(1.4vw, 16px);
     cursor: pointer;
 }
 
 .explore-products hr{
-    margin: 10px 0px;
+   
     height: 2px;
     background-color: #e2e2e2;
     border:none;
@@ -50,6 +44,91 @@
 .explore-products-list-item .active{
     padding: 1px;
     border: 4px solid #28aa3c;
-    border-radius: 30%;
-    
+    border-radius: 30%;   
+}
+
+@media (min-width: 320px) {
+    .explore-products{
+        margin-top: 8px;
+        gap: 8px;
+    }
+
+    .explore-products h2{
+        font-size: min(4.5vw, 26px)
+    }
+
+    .explore-products-text{
+        max-width: 100%;
+    }
+
+    .explore-products p{
+        font-size: 10px;
+    }
+
+    .explore-products-list{
+        margin: 8px 0px;
+    }  
+}
+
+@media (min-width: 340px) {
+    .explore-products-list-item img{
+        width: 70px;
+    }
+}
+
+@media (min-width: 340px) {
+    .explore-products-list-item img{
+        width: 75px;
+    }
+}
+
+@media (min-width: 340px) {
+    /* .explore-products h2{
+        font-size: 16px;
+    } */
+}
+
+@media (min-width: 410px) {
+    .explore-products-list-item img{
+        width: 80px;
+    }
+    .explore-products-list-item p{
+        font-size: 12px;
+    }
+    .explore-products-text{
+        max-width: 60%;
+    }
+}
+
+@media (min-width: 460px) {
+    .explore-products-list-item img{
+        width: 90px;
+    }
+}
+
+@media (min-width: 510px) {
+    .explore-products-list-item img{
+        width: 20vw;
+    }
+}
+
+@media (min-width: 640px) {
+    .explore-products p{
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 900px) {
+    .explore-products-list-item img{
+        width: 18vw;
+    }
+    .explore-products p{
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 700px) {
+    .explore-products-list-item p{
+        font-size: min(2.2vw, 18px)
+    }
 }
