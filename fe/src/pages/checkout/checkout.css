@@ -7,7 +7,7 @@
 }
 .checkout-left{
     width: 100%;
-    max-width: max(30%, 500px);
+    max-width: max(50%, 500px);
 }
 .checkout-left .title{
     margin-bottom: 50px;
@@ -32,4 +32,26 @@
 }
 .checkout .basket-total button{
     margin-top: 30px;
+}
+
+@media (max-width: 500px){
+    .checkout{
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .checkout-left .title{
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .checkout-left input{
+        padding: 4px;
+    }
+    .checkout-right h2{
+        font-size: 20px;
+    }
+    .checkout .basket-total button{
+        margin-top: 8px;
+    }
+   
 }

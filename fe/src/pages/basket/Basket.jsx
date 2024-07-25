@@ -51,12 +51,12 @@ const Basket = () => {
             <hr />
             <div className="basket-total-details">
               <p>Delivery Fee</p>
-              <p>${2.75}</p>
+              <p>${getBasketTotal() === 0 ? 0 : 2.75}</p>
             </div>
             <hr />
             <div className="basket-total-details">
               <b>Total</b>
-              <b>${getBasketTotal()+2.75}</b>
+              <b>${getBasketTotal() === 0 ? 0 : getBasketTotal() + 2.75}</b>
             </div>
           </div>
           <button onClick={()=>goTo('/checkout')}>PLACE ORDER</button>
