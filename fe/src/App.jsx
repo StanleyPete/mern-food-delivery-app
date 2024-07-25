@@ -7,9 +7,7 @@ import Home from './pages/home/Home'
 import Footer from './components/footer/Footer'
 import LogInPopUp from './components/logInSignUpPopUp/LogInPopUp'
 import SignUpPopUp from './components/logInSignUpPopUp/SignUpPopUp'
-
-
-
+import Basket from './pages/basket/Basket'
 
 
 
@@ -26,6 +24,7 @@ const App = () => {
         <NavMenu setShowLogin={setShowLogin} setShowSignUp={setShowSignUp}/>
         <Routes>
           <Route path='/' element={<Home/>} />
+          <Route path='/basket' element={<Basket/>}/>
 
         </Routes>
       </div>

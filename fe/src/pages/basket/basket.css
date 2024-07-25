@@ -1,0 +1,93 @@
+.basket{
+    margin-top: 100px;
+}
+.basket-items-title{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    color: grey;
+    font-size: max(1vw, 12px);
+}
+
+.basket-items-item{
+    margin: 10px 0px;
+    color: black;
+}
+
+.basket-items-item img{
+    width: 50px;
+}
+
+.basket hr{
+    height: 1px;
+    background-color: #e2e2e2;
+    border: none;
+}
+
+.remove{
+    cursor: pointer;
+}
+
+.basket-summary{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    gap: max(12vw, 20px);
+}
+
+.basket-total{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+}
+.basket-total-details{
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+}
+
+.basket-total hr {
+    margin: 10px 0px;
+}
+
+.basket-total button{
+    width: max(15vw, 200px);
+    padding: 12px 0px;
+    border: none;
+    color: white;
+    background-color: #28aa3c;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.basket-promocode{
+    flex: 1;
+}
+.basket-promocode p{
+    color:#555;
+}
+.basket-promocde-input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #eaeaea;
+    border-radius: 4px;
+}
+.basket-promocde-input input{
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+.basket-promocde-input button{
+    width: max(10vw, 150px);
+    padding: 12px 5px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 4px;
+
+}
+
+
