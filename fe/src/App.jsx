@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import NavMenu from './components/navMenu/NavMenu'
-
 import { Route, Routes } from 'react-router-dom'
-
 import Home from './pages/home/Home'
 import Footer from './components/footer/Footer'
 import LogInPopUp from './components/logInSignUpPopUp/LogInPopUp'
