@@ -1,10 +1,14 @@
 import React, { useContext } from 'react'
 import './basket.css'
 import { StoreContext } from '../../context/StoreContext';
+import { useNavigate } from 'react-router-dom';
 
 const Basket = () => {
 
     const {basketItems, product_list, removeFromBasket, getBasketTotal} = useContext(StoreContext);
+
+    const goTo = useNavigate();
+
   return (
     <div className="basket">
       <div className="basket-items">
@@ -55,7 +59,7 @@ const Basket = () => {
               <b>${getBasketTotal()+2.75}</b>
             </div>
           </div>
-        <button>PAY NOW</button>
+          <button onClick={()=>goTo('/checkout')}>PLACE ORDER</button>
         </div>
       <div className="basket-promocode">
         <div>

@@ -1,0 +1,35 @@
+.checkout{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 100px;
+}
+.checkout-left{
+    width: 100%;
+    max-width: max(30%, 500px);
+}
+.checkout-left .title{
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.checkout-left input{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #c5c5c5;
+    border-radius: 4px;
+    outline-color: #28aa3c;
+}
+.checkout-left .double-fields{
+    display: flex;
+    gap: 10px;
+}
+.checkout-right{
+    width: 100%;
+    max-width: max(40%, 500px);
+}
+.checkout .basket-total button{
+    margin-top: 30px;
+}
