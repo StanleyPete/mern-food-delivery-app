@@ -90,4 +90,13 @@
 
 }
 
+@media (max-width:750px){
+    .basket-summary{
+        flex-direction: column-reverse;
+    }
+    .basket-promocode{
+        justify-content: start;
+    }
+}
+
 

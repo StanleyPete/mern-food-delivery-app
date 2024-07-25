@@ -4,7 +4,7 @@ import { StoreContext } from '../../context/StoreContext';
 
 const Basket = () => {
 
-    const {basketItems, product_list, removeFromBasket} = useContext(StoreContext);
+    const {basketItems, product_list, removeFromBasket, getBasketTotal} = useContext(StoreContext);
   return (
     <div className="basket">
       <div className="basket-items">
@@ -42,7 +42,7 @@ const Basket = () => {
           <div>
             <div className="basket-total-details">
               <p>Subtotal</p>
-              <p>{0}</p>
+              <p>${getBasketTotal()}</p>
             </div>
             <hr />
             <div className="basket-total-details">
@@ -52,7 +52,7 @@ const Basket = () => {
             <hr />
             <div className="basket-total-details">
               <b>Total</b>
-              <b>${0}</b>
+              <b>${getBasketTotal()+2.75}</b>
             </div>
           </div>
         <button>PAY NOW</button>
