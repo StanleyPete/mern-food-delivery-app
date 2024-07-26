@@ -8,8 +8,9 @@
 .add-product form{
     gap: 20px;
 }
-.upload-image img{
+.upload-image img, .upload-image{
     width: 120px;
+    cursor: pointer;
 }
 
 .add-product-name, .add-product-description{
