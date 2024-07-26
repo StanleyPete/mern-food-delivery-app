@@ -22,5 +22,10 @@ hr{
 .app-container{
     display: flex;
 }
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 

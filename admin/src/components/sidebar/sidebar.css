@@ -22,6 +22,10 @@
     border-radius: 3px 0px 0px 3px;
     cursor: pointer;
 }
+.sidebar-button.active{
+    background-color: #c5d6c8;
+    border-color: #28aa3c;
+}
 
 @media (max-width: 900px){
     .sidebar-button p{
