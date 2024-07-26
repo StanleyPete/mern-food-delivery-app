@@ -1,0 +1,12 @@
+.navmenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4%;
+}
+.navmenu .log{
+    width: max(10%, 80px);
+}
+.navmenu .profile-image{
+    width: 40px;
+}
