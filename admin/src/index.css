@@ -19,6 +19,8 @@ hr{
     height: 1px;
     background-color: #a9a9a9;
 }
-
+.app-container{
+    display: flex;
+}
 
 
