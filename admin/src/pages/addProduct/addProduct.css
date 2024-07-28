@@ -36,3 +36,27 @@
     cursor: pointer;
 }
 
+@media (max-width: 480px){
+    .add-product{
+        margin-top: 15px;
+        width: 100%;
+    }
+} 
+
+@media (max-width: 400px){
+    .add-product p{
+       font-size: 14px;
+    }
+    .add-product-name input, .add-product-description textarea{
+        padding: 5px;
+        font-size: 12px;
+        width: 70vw;
+    }
+  
+    .add-category-price select, .add-category-price input{
+        padding: 5px;
+        font-size: 12px;
+        width: 25vw
+    }
+   
+} 
