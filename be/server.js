@@ -2,6 +2,9 @@ import express from "express";
 import cors from "cors";
 import { connectDb } from "./config/db.js";
 import productsRouter from "./routes/productsRoute.js";
+import userRouter from "./routes/userRoute.js";
+import 'dotenv/config'
+
 
 //app
 const app = express();
@@ -17,6 +20,7 @@ connectDb();
 //API endpoints
 app.use("/api/products", productsRouter);
 app.use("/images", express.static("uploads"));
+app.use("/api/user", userRouter);
 
 app.get("/", (req, res) => {
     res.send("Test")
