@@ -3,12 +3,10 @@ import './listProducts.css'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 
-const ListProducts = () => {
+const ListProducts = ({url}) => {
 
   //Store the products from the database in state variable:
   const [products, setProductsList] = useState([]);
-
-  const url = "http://localhost:4000";
 
   const fetchProducts = async () => {
     const response = await axios.get(`${url}/api/products/product_list`);
