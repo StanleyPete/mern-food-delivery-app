@@ -6,6 +6,8 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
 
     const [basketItems, setBasketItems] = useState({});
+    const url = "http://localhost:4000";
+    const [token, setToken] = useState("");
 
     const addToBasket = (itemId) => {
         if(!basketItems[itemId]){
@@ -29,6 +31,13 @@ const StoreContextProvider = (props) => {
         }
         return total;
     }
+
+    //localStorage data is saved in token state when page refreshed
+    useEffect(() => {
+        if (localStorage.getItem("token")) {
+            setToken(localStorage.getItem("token"))
+        }
+    },[])
          
     const contextValue = {
         product_list,
@@ -36,7 +45,10 @@ const StoreContextProvider = (props) => {
         setBasketItems,
         addToBasket,
         removeFromBasket,
-        getBasketTotal
+        getBasketTotal,
+        url,
+        token,
+        setToken
     };
 
     return (

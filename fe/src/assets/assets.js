@@ -16,7 +16,9 @@ import twitter_icon from './twitter_icon.png'
 import google_play_store from './google_play_store.png'
 import apple_store from './apple_store.png'
 import cross_icon from './cross_icon.png'
-
+import profile_icon from './profile_icon.png'
+import bag_icon from './bag_icon.png'
+import logout_icon from './logout_icon.png'
 
 import product_1 from './product_1.png'
 import product_2 from './product_2.png'
@@ -317,6 +319,9 @@ export const assets = {
     twitter_icon,
     google_play_store,
     apple_store,
-    cross_icon
+    cross_icon,
+    profile_icon,
+    bag_icon,
+    logout_icon
 }
 
