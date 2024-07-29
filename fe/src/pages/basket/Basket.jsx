@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Basket = () => {
 
-    const {basketItems, product_list, removeFromBasket, getBasketTotal} = useContext(StoreContext);
+    const {basketItems, product_list, removeFromBasket, getBasketTotal, url} = useContext(StoreContext);
 
     const goTo = useNavigate();
 
@@ -27,7 +27,7 @@ const Basket = () => {
             return (
               <div>
                 <div className="basket-items-title basket-items-item">
-                  <img src={item.image} alt="" />
+                  <img src={url + "/images/" + item.image} alt="" />
                   <p>{item.name}</p>
                   <p>${item.price}</p>
                   <p>{basketItems[item._id]}</p>
