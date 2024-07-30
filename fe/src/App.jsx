@@ -7,6 +7,7 @@ import LogInPopUp from './components/logInSignUpPopUp/LogInPopUp'
 import SignUpPopUp from './components/logInSignUpPopUp/SignUpPopUp'
 import Basket from './pages/basket/Basket'
 import Checkout from './pages/checkout/Checkout'
+import Verify from './pages/verify/Verify'
 
 
 
@@ -25,6 +26,7 @@ const App = () => {
           <Route path='/' element={<Home/>} />
           <Route path='/basket' element={<Basket/>}/>
           <Route path='/checkout' element={<Checkout/>}/>
+          <Route path='/verify' element={<Verify/>}/>
 
         </Routes>
       </div>
