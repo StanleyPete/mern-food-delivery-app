@@ -4,6 +4,7 @@ import { connectDb } from "./config/db.js";
 import productsRouter from "./routes/productsRouter.js";
 import userRouter from "./routes/userRouter.js";
 import basketRouter from "./routes/basketRouter.js";
+import orderRouter from "./routes/orderRouter.js";
 import 'dotenv/config'
 
 
@@ -23,6 +24,7 @@ app.use("/api/products", productsRouter);
 app.use("/images", express.static("uploads"));
 app.use("/api/user", userRouter);
 app.use("/api/basket", basketRouter);
+app.use("/api/order", orderRouter);
 
 app.get("/", (req, res) => {
     res.send("Test")

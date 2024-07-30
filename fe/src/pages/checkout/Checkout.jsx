@@ -1,30 +1,87 @@
 import React, { useContext } from 'react'
 import './checkout.css'
 import { StoreContext } from '../../context/StoreContext'
+import { useState } from 'react';
+import axios from 'axios'
+
 
 const Checkout= () => {
 
-    const {getBasketTotal} = useContext(StoreContext); 
+    const {getBasketTotal, token, product_list, basketItems, url} = useContext(StoreContext); 
 
+    //State variable where information from order form is stored:
+    const [data, setData] = useState({
+      firstName: "",
+      lastName: "",
+      email: "",
+      address: "",
+      city: "",
+      state: "",
+      country: "",
+      zipcode: "",
+      phone: ""
+    });
+
+    //Saving form data in data state:
+    const onChangeHandler = (event) => {
+      const name = event.target.name;
+      const value = event.target.value;
+      setData(data => ({...data,[name]:value}));
+    };
+
+    //onChangeHandler check:
+    // useEffect(() => {
+    //   console.log(data)
+    // },[data]);
+
+    const placeOrder = async (event) => {
+      event.preventDefault();
+      let orderItems = [];
+      //adding quantity to orderItems array:
+      product_list.map((item) => {
+        if (basketItems[item._id] > 0) {
+          let itemInfo = item;
+          itemInfo["quantity"] = basketItems[item._id];
+          orderItems.push(itemInfo);
+          
+        }
+      });
+
+     let orderData = {
+      address: data,
+      items: orderItems,
+      amount: getBasketTotal() + 2
+     }
+
+     let response = await axios.post(url + "/api/order/place_order", orderData, {headers: {token}});
+     if (response.data.success) {
+      const {session_url} = response.data;
+      window.location.replace(session_url);
+     } else {
+      
+      alert("Error");
+     }
+
+    }
   return (
-    <form className="checkout">
+    <form onSubmit={placeOrder} className="checkout">
       <div className="checkout-left">
         <p className="title">Delivery information</p>
         <div className="double-fields">
-          <input type="text" placeholder="First name"/>
-          <input type="text" placeholder="Last name"/>
+          <input required name='firstName' onChange={onChangeHandler} value={data.firstName} type="text" placeholder="First name"/>
+          <input required name='lastName' onChange={onChangeHandler} value={data.lastName} type="text" placeholder="Last name"/>
         </div>
-        <input type="email" placeholder="E-mail address"/>
-        <input type="text" placeholder="Address"/>
+        <input required name='email' onChange={onChangeHandler} value={data.email} type="email" placeholder="E-mail address"/>
+        <input required name='address' onChange={onChangeHandler} value={data.address} type="text" placeholder="Address"/>
         <div className="double-fields">
-          <input type="text" placeholder="City"/>
-          <input type="text" placeholder="State"/>
+          <input required name='city' onChange={onChangeHandler} value={data.city} type="text" placeholder="City"/>
+          <input required name='state' onChange={onChangeHandler} value={data.state} type="text" placeholder="State"/>
         </div>
         <div className="double-fields">
-          <input type="text" placeholder="Zip code"/>
-          <input type="text" placeholder="Country"/>
+          <input required name='zipcode' onChange={onChangeHandler} value={data.zipcode} type="text" placeholder="Zip code"/>
+          <input required name='country' onChange={onChangeHandler} value={data.country} type="text" placeholder="Country"/>
         </div>
-        <input type="text"placeholder="Phone"/>
+        <input required name='phone' onChange={onChangeHandler} value={data.phone} type="text"placeholder="Phone"/>
       </div>
       <div className="checkout-right">
         <div className="basket-total">
@@ -45,7 +102,7 @@ const Checkout= () => {
                 <b>${getBasketTotal() === 0 ? 0 : getBasketTotal() + 2.75}</b>
               </div>
             </div>
-            <button>PAY NOW</button>
+            <button type="submit">PAY NOW</button>
           </div>
       </div>
     </form>
