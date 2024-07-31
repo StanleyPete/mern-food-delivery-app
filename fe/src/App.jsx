@@ -8,6 +8,7 @@ import SignUpPopUp from './components/logInSignUpPopUp/SignUpPopUp'
 import Basket from './pages/basket/Basket'
 import Checkout from './pages/checkout/Checkout'
 import Verify from './pages/verify/Verify'
+import MyOrders from './pages/myOrders/MyOrders'
 
 
 
@@ -27,6 +28,7 @@ const App = () => {
           <Route path='/basket' element={<Basket/>}/>
           <Route path='/checkout' element={<Checkout/>}/>
           <Route path='/verify' element={<Verify/>}/>
+          <Route path='/myorders' element={<MyOrders/>}/>
 
         </Routes>
       </div>
