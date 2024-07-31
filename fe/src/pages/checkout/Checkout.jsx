@@ -1,13 +1,16 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './checkout.css'
 import { StoreContext } from '../../context/StoreContext'
-import { useState } from 'react';
 import axios from 'axios'
+
 
 
 const Checkout= () => {
 
     const {getBasketTotal, token, product_list, basketItems, url} = useContext(StoreContext); 
+
+    const goTo = useNavigate();
 
     //State variable where information from order form is stored:
     const [data, setData] = useState({
@@ -61,8 +64,17 @@ const Checkout= () => {
       
       alert("Error");
      }
-
     }
+
+    //Logged in users can proceed to payment confition:
+    useEffect(() => {
+      if (!token) {
+        goTo("/basket");
+      } else if (getBasketTotal() === 0) {
+        goTo("/basket");
+      }
+    },[token])
+
   return (
     <form onSubmit={placeOrder} className="checkout">
       <div className="checkout-left">
