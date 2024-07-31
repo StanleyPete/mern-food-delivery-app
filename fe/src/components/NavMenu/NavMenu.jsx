@@ -48,7 +48,7 @@ const NavMenu = ({setShowLogin, setShowSignUp}) => {
           <div className="navmenu-profile">
             <img src={assets.profile_icon} alt="Profile icon image" />
             <ul className="navmenu-profile-dropdown">
-              <li><img src={assets.bag_icon} alt="Bag icon image" /><p>Order</p></li>
+              <li onClick={()=>goTo("/myorders")}><img src={assets.bag_icon} alt="Bag icon image" /><p>Order</p></li>
               <hr />
               <li onClick={logOut}><img src={assets.logout_icon} alt="Logout icon image" /><p>Logout</p></li>
             </ul>
