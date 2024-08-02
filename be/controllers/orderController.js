@@ -10,7 +10,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 //Placing user order from fronend
 const placeOrder = async (req, res) => {
 
-    const fe_url = "http://localhost:5173";
+    const fe_url = "http://localhost:5174";
 
     try {
         //Creating new order:
@@ -105,4 +105,16 @@ const listOrders = async (req, res) => {
     }
 }
 
-export { placeOrder, verifyOrder, userOrders, listOrders }
+//Updating order status
+const updateStatus = async (req, res) => {
+    try {
+        await orderModel.findByIdAndUpdate(req.body.orderId, {status: req.body.status});
+        res.json({success: true, message: "Status updated"});
+    } catch (error) {
+        console.log(error);
+        res.json({success: false, message: "Error"});
+    }
+}
+
+
+export { placeOrder, verifyOrder, userOrders, listOrders, updateStatus}
