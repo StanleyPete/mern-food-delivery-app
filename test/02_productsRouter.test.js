@@ -30,9 +30,7 @@ describe('productsRouter.js - POST /api/products/add', () => {
         
         expect(response.status).to.equal(200)
         expect(response.body.success).to.be.true;
-        expect(response.body.message).to.equal('Product added');
-
-        
+        expect(response.body.message).to.equal('Product added')
     });
 });
 
@@ -50,10 +48,9 @@ describe('productsRouter.js - POST /api/products/remove', () => {
         expect(response.status).to.equal(200)
         expect(response.body.success).to.be.true;
         expect(response.body.message).to.equal('Product removed');
-
-        
     });
 });
+
 
 //LIST PRODUCT
 describe('productsRouter.js - POST /api/products/product_list', () => {
