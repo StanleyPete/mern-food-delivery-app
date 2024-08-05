@@ -2,7 +2,7 @@
   "name": "be",
   "version": "1.0.0",
   "description": "backend",
-  "main": "server.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "server": "nodemon server.js"

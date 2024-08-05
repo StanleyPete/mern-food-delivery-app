@@ -27,12 +27,14 @@ app.use("/api/basket", basketRouter);
 app.use("/api/order", orderRouter);
 
 app.get("/", (req, res) => {
-    res.send("Test")
+    res.send("Working")
 });
 
 app.listen(port, () => {
     console.log(`Server running: http://localhost:${port}`);
 });
+
+export default app;
 
 
 
