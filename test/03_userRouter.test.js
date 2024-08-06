@@ -1,10 +1,15 @@
-process.env.JWT_SECRET = 'test_secret_key'
 import request from 'supertest';
 import app from '../be/server.js'; 
 import { expect } from 'chai';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
+process.env.JWT_SECRET = 'test_secret_key'
 
-
+// URL Conversion to dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 //USER SIGNUP
 describe('userRouter.js - POST /api/user/signup', () => {
@@ -90,6 +95,10 @@ describe('userRouter.js - POST /api/user/login', () => {
          
         expect(response.status).to.equal(200)
         expect(response.body.success).to.be.true
+        
+        //tokenTest used in other tests
+        const tokenTest = response.body.token
+        fs.writeFileSync(path.join(__dirname, 'tokenTest.txt'), tokenTest);
     });
 });
 
@@ -126,3 +135,4 @@ describe('userRouter.js - POST /api/user/login - incorrect password scenario', (
         expect(response.body.message).to.equal('Incorrect password')
     });
 });
+
