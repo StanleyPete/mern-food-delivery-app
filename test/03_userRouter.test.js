@@ -4,6 +4,7 @@ import { expect } from 'chai';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import userModel from '../be/models/userModel.js';
 
 process.env.JWT_SECRET = 'test_secret_key'
 
@@ -13,6 +14,11 @@ const __dirname = path.dirname(__filename);
 
 //USER SIGNUP
 describe('userRouter.js - POST /api/user/signup', () => {
+    
+    after(async () => {
+        await userModel.deleteOne({ email: "testname@test.pl"});
+    });
+
     it('should return 200 and create new user in db, success:true', async () => {
         
         const response = await request(app)
@@ -35,8 +41,8 @@ describe('userRouter.js - POST /api/user/signup - user already exists scenario',
         const response = await request(app)
         .post('/api/user/signup')
         .send({ 
-            name: "testName",
-            email: "testname@test.pl",
+            name: "test",
+            email: "test@test.pl",
             password: "testpassword"
          })
          
